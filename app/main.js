@@ -1,16 +1,14 @@
 //const net = require("net"); fldsjfldshflasfj dsafl
 const http = require('http');
 ;
-//const http = require('http');
+const net = require('net');
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.end('OK');
+const server = net.createServer((socket) => {
+  socket.write('HTTP/1.1 200 OK\r\n\r\n\r\n');
+  socket.end();
 });
 
-server.listen(3000, () => {
-  console.log('Server listening on port 3000');
-});
+server.listen(4221, 'localhost');
 
 // You can use print statements as follows for debugging, they'll be visible when running tests.
 // console.log("Logs from your program will appear here!");
