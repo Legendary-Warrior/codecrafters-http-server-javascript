@@ -1,11 +1,11 @@
-//const net = require("net"); fldsjfldshflasfj dsafl
+//const net = require("net");
 //const http = require('http');
 ;
 const net = require('net');
 
 const server = net.createServer((socket) => {
   // Write the raw HTTP response as required
-  socket.write('HTTP/1.1 200 OK\r\n\r\n');
+  socket.write('HTTP/1.1 200 OK\r\n\r\n\r\n');
   socket.end();
 });
 
