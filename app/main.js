@@ -7,5 +7,8 @@ const server = net.createServer((socket) => {
     socket.end();
   });
 });
+socket.on("close", () => {
+  socket,end();
+});
 
 server.listen(4221, "localhost");
