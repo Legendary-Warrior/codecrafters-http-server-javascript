@@ -1,6 +1,6 @@
 const net = require("net");
 
-console.log("Logs from your program will appear here!");
+console.log("hello!");
 
 const server = net.createServer((socket) => {
   socket.on("data", (data) => {
